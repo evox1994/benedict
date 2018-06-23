@@ -4,17 +4,13 @@ html{
 body{
 	font-family:'Open Sans',sans-serif;
 	color:#19222f;
+	min-width: 330px;
 }
 body.fixed-width{
-	min-width:980px;
+	min-width:330px;
 }
 body.popup-visible{
 	overflow:hidden;
-}
-@media only screen and (max-width: 767px) {
-	body {
-		min-width: 300px !important;
-	}
 }
 h2{
 	margin:0;
