@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700,600&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="css/bootstrap.css"/>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<header id="header">
+    <div class="background"></div>
+    <div class="container">
+        <div class="intro-block">
+            <a class="logo" href="#"></a>
+            <div class="method">Наша методика обучения языкам эффективно работает с 1928 года</div>
+            <div class="contacts">
+                <a class="phone" href="#">+7 3822 <b>51-39-59</b></a>
+                <div class="socials">
+                    <a class="fb" href="#"></a>
+                    <a class="inst" href="#"></a>
+                    <a class="vk" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="line"></div>
+    <div class="container">
+        <ul class="nav">
+            <li><a class="active" href="#">О школе</a></li>
+            <li><a href="#">Программы </a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Цены</a></li>
+            <li><a href="#">Сведения об учереждении</a></li>
+            <li><a href="#">Наши Школы</a></li>
+        </ul>
+    </div>
+    <div class="line"></div>
+</header>
+<div class="main-banner address">
+    <div class="wrapper">
+        <div class="round">
+            <div class="title">
+                <div class="td">
+                    <div class="large">Адреса школы</div>
+                    <div class="small">ближе к Вам</div>
+                </div>
+            </div>
+            <div class="icon"></div>
+        </div>
+    </div>
+</div>
+<section class="address-sec">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-push-4">
+                <div class="round red">
+                    <div class="title">
+                        <div class="td">Центральный офис</div>
+                    </div>
+                    <hr/>
+                    <div class="subtitle">
+                        <b>г. Томск, ул. Гагарина, 10</b><br>
+                        тел./факс: (3822) 51-39-59<br>
+                        e-mail: <a href="mailto:office@benedicttomsk.ru">office@benedicttomsk.ru</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 col-md-pull-4">
+                <div class="round">
+                    <div class="title">
+                        <div class="td">в микрорайоне "Зеленые Горки"</div>
+                    </div>
+                    <hr/>
+                    <div class="subtitle">
+                        <b>г.Томск, ул.Прибрежная, 36</b><br>
+                        тел. +7 (952) 893-11-22<br>
+                        +7 (952) 893-11-33
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="round">
+                    <div class="title">
+                        <div class="td">в Октябрьском районе</div>
+                    </div>
+                    <hr/>
+                    <div class="subtitle">
+                        <b>г. Томск, ул. Суворова, 1</b><br>
+                        тел.  +7 (952) 893-11-44
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="map-sec">
+    <div id="map" class="map"></div>
+    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+    <script>
+        /* TODO: проставить метки */
+        ymaps.ready(init);
+        var myMap;
+
+        function init(){
+            myMap = new ymaps.Map("map", {
+                center: [56.48202577, 84.95190650],
+                zoom: 14,
+                controls: ["zoomControl"]
+            });
+            myMap.behaviors
+                    .disable(["scrollZoom"])
+        }
+    </script>
+</div>
+<footer id="footer">
+    <div class="container">
+        <div class="intro-block">
+            <a class="logo" href="#"></a>
+            <div class="method">Наша методика обучения языкам эффективно работает с 1928 года</div>
+            <div class="contacts">
+                <a class="phone" href="#">+7 3822 <b>51-39-59</b></a>
+                <div class="socials">
+                    <a class="fb" href="#"></a>
+                    <a class="inst" href="#"></a>
+                    <a class="vk" href="#"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<div class="popup" id="thanks">
+    <div class="container">
+        <a class="close" href="#"></a>
+        <div class="round">
+            <div class="title">Спасибо за вашу заявку</div>
+            <hr/>
+            <div class="subtitle">в ближайшее время,<br>наш менеджер свяжется с Вами</div>
+        </div>
+    </div>
+</div>
+<div id="pop-overlay"></div>
+<script src="js/vendor.js"></script>
+<!--<script type="text/javascript" src="js/bootstrap.js"></script>-->
+<script type="text/javascript" src="js/common.js"></script>
+<script type="text/javascript" src="js/addresses.js"></script>
+</body>
+</html>

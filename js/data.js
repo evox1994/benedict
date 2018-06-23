@@ -1,0 +1,1 @@
+!function(t){function n(){var n=t(".data-menu");n.length&&n.on("click","a",e)}function e(n){n.preventDefault(),t(t(this).attr("href")).velocity("scroll",{offset:-100,duration:400})}t(n)}(jQuery);
