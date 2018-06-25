@@ -1068,10 +1068,10 @@ h2{
 }
 @media only screen and (max-width: 500px) {
 	.learner-section .svg {
-		-webkit-transform: scale(0.31);
-		-moz-transform: scale(0.31);
-		-ms-transform: scale(0.31);
-		transform: scale(0.31);
+		-webkit-transform: scale(0.33);
+		-moz-transform: scale(0.33);
+		-ms-transform: scale(0.33);
+		transform: scale(0.33);
 		top: -133px;
 	}
 	.learner-section .container {
