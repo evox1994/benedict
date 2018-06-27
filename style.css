@@ -2660,7 +2660,7 @@ h2{
 	position:relative;
 	margin:0 auto;
 	min-height:600px;
-	max-width:960px;
+	width:960px;
 }
 .programs-gu .svg{
 	position:absolute;
@@ -2799,6 +2799,21 @@ h2{
 	opacity:0;
 	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
 	filter:alpha(opacity=0);
+}
+@media screen and (max-width: 500px) {
+	.programs-gu .container {
+		position: relative;
+		height: 675px;
+	}
+	.programs-gu .content {
+		position: absolute;
+		-webkit-transform: scale(0.33);
+		-moz-transform: scale(0.33);
+		-ms-transform: scale(0.33);
+		transform: scale(0.33);
+		left: calc(50% - 480px);
+		top: 250px;
+	}
 }
 .scheme-sec{
 	padding:50px 0 102px;
@@ -3348,6 +3363,22 @@ h2{
 	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
 	filter:alpha(opacity=100);
 }
+@media only screen and (max-width: 767px) {
+	.data-menu .menu {
+		margin: 0;
+		padding: 0;
+	}
+	.data-menu .menu li {
+		padding-left: 0;
+		width: 100%;
+	}
+	.data-menu .menu a {
+		display: block;
+	}
+	.data-menu .menu .overlay {
+		left: 0;
+	}
+}
 .data-main-sec{
 	padding:66px 0 76px;
 	background:url(img/advan-bg.jpg) center top no-repeat;
@@ -3513,6 +3544,21 @@ h2{
 	opacity:1;
 	-ms-filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
 	filter:alpha(opacity=100);
+}
+@media screen and (max-width: 767px) {
+	.prices-sec .menu {
+		margin: 0;
+	}
+	.prices-sec .menu li {
+		padding-left: 0;
+		width: 100%;
+	}
+	.prices-sec .menu a {
+		width: 100%;
+	}
+	.prices-sec .menu .overlay {
+		left: 0;
+	}
 }
 .prices-sec .sections{
 	overflow:hidden;
