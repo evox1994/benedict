@@ -10,4 +10,7 @@ $(document).ready(function(){
             $('body').addClass('active');
         }
     });
+    var d = new Date();
+    $('.date-span').text(d.getFullYear());
+    $('input[type="tel"]').inputmask('+7 999 999 99 99');
 });

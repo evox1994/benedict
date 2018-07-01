@@ -97,23 +97,7 @@
     </div>
 </section>
 <div class="map-sec">
-    <div id="map" class="map"></div>
-    <script src="http://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-    <script>
-        /* TODO: проставить метки */
-        ymaps.ready(init);
-        var myMap;
-
-        function init(){
-            myMap = new ymaps.Map("map", {
-                center: [56.48202577, 84.95190650],
-                zoom: 14,
-                controls: ["zoomControl"]
-            });
-            myMap.behaviors
-                    .disable(["scrollZoom"])
-        }
-    </script>
+    <iframe src="https://yandex.ru/map-widget/v1/-/CBuyvKf5PC" width="560" height="400" frameborder="1" allowfullscreen="true"></iframe>
 </div>
 <footer id="footer">
     <div class="container">
