@@ -687,8 +687,8 @@ h2, h1{
 	}
 }
 @media only screen and (max-width: 767px) {
-	.main-banner .wrapper {
-		padding-top: 80px;
+	.main-banner .wrapper, .main-banner .container {
+		padding-top: 80px !important;
 	}
 }
 .stat-section{
@@ -1265,6 +1265,19 @@ h2, h1{
 }
 .order-section input[type="submit"]:hover,.order-section input[type="submit"]:focus{
 	background:#960000;
+}
+.order-section .form-group .button-text {
+	color: #000000;
+	font-size: 14px;
+	margin-top: 10px;
+	text-align: center;
+}
+.order-section .form-group .button-text a {
+	color: #000000;
+	text-decoration: none;
+}
+.order-section .form-group .button-text a:hover {
+	text-decoration: underline;
 }
 @media only screen and (min-width:768px){
 	.order-section .round{
@@ -4377,6 +4390,19 @@ h2, h1{
 	-webkit-box-shadow:2px 2px 1px rgba(0,0,0,.3),inset 0 0 35px rgba(0,0,0,.3);
 	box-shadow:2px 2px 1px rgba(0,0,0,.3),inset 0 0 35px rgba(0,0,0,.3);
 }
+.popup-form .button-text {
+	text-align: center;
+	font-size: 14px;
+	color: #000000;
+	margin-top: 10px;
+}
+.popup-form .button-text a {
+	color: #000000;
+	text-decoration: none;
+}
+.popup-form .button-text a:hover {
+	text-decoration: underline;
+}
 .popup-news.loading .container{
 	min-height:300px;
 }
@@ -4421,4 +4447,57 @@ h2, h1{
 	line-height:24px;
 	font-weight:300;
 	text-align:center;
+}
+
+#footer .footer-info-list {
+	text-align: left;
+	padding: 10px 0;
+}
+#footer .footer-info-list li {
+	display: inline-block;
+	vertical-align: top;
+	color: #ffffff;
+	font-size: 12px;
+	margin-right: 10px;
+}
+#footer .footer-info-list li a {
+	color: #ffffff;
+	text-decoration: none;
+}
+#footer .footer-info-list li a:hover {
+	text-decoration: underline;
+}
+
+@media only screen and (max-width: 767px) {
+	#footer .footer-info-list {
+		text-align: center;
+	}
+	#footer .footer-info-list li {
+		display: block;
+		margin: 0 0 10px;
+	}
+}
+
+.policy .container {
+	padding-top: 50px;
+}
+.policy h1 {
+	display: block;
+	margin-bottom: 100px;
+	font-size: 50px;
+	line-height: 1;
+}
+.policy h2 {
+	font-size: 40px;
+	margin: 40px 0;
+	color: #000000;
+	line-height: 1;
+}
+.policy p {
+	display: block;
+	text-align: left;
+	font-size: 20px;
+	margin-bottom: 20px;
+	line-height: 1.2;
+	color: #000000;
 }
