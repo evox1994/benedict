@@ -32,11 +32,28 @@
 		var n,o,t,c,l=(e(i),0);
 		e(a)
 }(jQuery,window);*/
+;(function($) {
+    $.lebnikLoad = function(selector, url, callback){ $(document.body).lebnikLoad(selector, url, callback, true); };
+    $.fn.lebnikLoad = function(selector, url, callback, without_selector_document){
+        var selector_document = this;
+        var e = $('<iframe style="display:none" src="'+url+'"></iframe>');
+        $(document.body).append( e );
+        $(e).load(function(){
+            var x = $(selector, e[0].contentWindow.document);
+            if(callback){
+                callback(x);
+            }else if(without_selector_document != true){
+                $(selector_document).html( $(x).html() );
+            }
+        });
+    };
+})(jQuery);
+
 $(document).ready(function(){
 	function filter(){
-		if (location.hash) {
+		/*if (location.hash) {
 			var block = location.hash;
-			/*var block_str = location.hash.slice(1);*/
+			//var block_str = location.hash.slice(1);
 			$('.menu li a').each(function(){
 				if ( $(this).attr('href') == block ) {
 					$(this).addClass('active');
@@ -44,27 +61,39 @@ $(document).ready(function(){
 			});
 			$(block).css('display','block');
 			$(block).animate({opacity: 1}, 300);
+		} else {
+			$('#section-1').css('display','block');
+			$('#section-1').animate({opacity: 1}, 300);
+		}*/
+		if (location.hash) {
+			$('.menu li a').removeClass('active');
+			$('.menu li a').each(function(){
+				if ( $(this).attr('href') == location.hash ) {
+					$(this).addClass('active');
+				}
+			});
+			var pg_str = location.hash.slice(1);
+			pg_str = 'https://evox1994.github.io/benedict/'+pg_str;
+			$('#section').lebnikLoad("#section", pg_str);
 		}
 	}
-	function pred(){
+	/*function pred(){
 		$('.section').css({
 			'display': 'none',
 			'opacity': 0,
 		});
 		$('.menu li a').removeClass('active');
 	}
-	pred();
+	pred();*/
 	filter();
 
 	$('.menu a').click(function(){
-		var block = $(this).attr('href');
-		location.hash = block;
-		setTimeout(function(){var st = $(block).offset().top;$('html,body').animate({scrollTop: st - 100}, 300)});
+		var pg = $(this).attr('href');
+		location.hash = pg;
 		return false;
 	});
 
 	$(window).on('hashchange',function(){
-		pred();
 		filter();
 	});
 });
